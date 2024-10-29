@@ -13,7 +13,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/register', {
+            const response = await axios.post('https://final-project-database-backend.onrender.com/register', {
                 username,
                 password,
                 email,

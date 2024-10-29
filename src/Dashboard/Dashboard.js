@@ -39,14 +39,14 @@ const Dashboard = () => {
     }, [startDate, endDate, orderBy]);
 
     const fetchData = async () => {
-        const response = await axios.get('http://localhost:3000/covid-data', {
+        const response = await axios.get('https://final-project-database-backend.onrender.com/covid-data', {
             params: { startDate, endDate, orderBy },
         });
         setData(response.data);
     };
 
     const fetchDiffData = async () => {
-        const response = await axios.get('http://localhost:3000/getDiffDay', {
+        const response = await axios.get('https://final-project-database-backend.onrender.com/getDiffDay', {
             params: { startDate, endDate, orderBy },
         });
         setData(response.data);
